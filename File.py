@@ -17,8 +17,15 @@ cardLabel = Label(root, image=img)
 cardLabel.pack()
 
 def authentication():
-    inputedData = input_box.get()
-    print(type(inputedData))
+    inputedData = int(input_box.get())
+    inputdata = type(inputedData)
+    
+    try:
+        if(inputdata=="int"):
+        print("card is expected")
+    except:
+        print("card is rejected")
+        
     
     #if inputedData == 202212345:
         #messagebox.showinfo("CreditCard","Credit Card Accepted")
